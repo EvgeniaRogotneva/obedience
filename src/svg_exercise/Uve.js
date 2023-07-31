@@ -1,14 +1,6 @@
 const Uve = () => {
   return (
     <g transform="rotate(90 90, 90)">
-      {/* <svg
-        id="Uve"
-        width="500"
-        height="500"
-        viewBox="0 0 500 500"
-        xmlns="http://www.w3.org/2000/svg"
-        transform="rotate(0 0 ,90)"
-      > */}
       <defs>
         <pattern
           id="meter"
@@ -105,7 +97,6 @@ const Uve = () => {
         markerEnd="url(#dumbbell)"
         markerStart="url(#dumbbell)"
       />
-      {/* </svg> */}
     </g>
   );
 };
