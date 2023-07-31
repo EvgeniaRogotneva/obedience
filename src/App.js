@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Field from "./field/Field";
+import Uve from "./svg_exercise/Uve";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>так, ну ок, стало лучше, но все равно говно какое-то</h1>
+      <p>
+        следующий шаг - взять и сделать Уве с передаваемыми параметрами
+        координат. И еще размеры по стенкам подписать !!!! площадь под конусами
+        - 0,4-0,5 кв м
+      </p>
+      <Field x={50} y={50} />
+      <Uve />
     </div>
   );
 }
