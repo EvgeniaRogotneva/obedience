@@ -14,8 +14,8 @@ const Field = ({ x, y }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <pattern id="meter" width="10" height="10" patternUnits="userSpaceOnUse">
-        <line x1="0" y1="0" x2="0" y2="10" stroke="blue" />
-        <line x1="0" y1="0" x2="10" y2="0" stroke="blue" />
+        <line x1="0" y1="0" x2="0" y2="10" stroke="lightblue" />
+        <line x1="0" y1="0" x2="10" y2="0" stroke="lightblue" />
       </pattern>
       <rect
         fill="url(#meter)"
