@@ -1,3 +1,4 @@
+import Uve from "../svg_exercise/Uve";
 import AddText from "./AddMeters";
 const Field = ({ x, y }) => {
   const fieldWidth = x * 10;
@@ -25,6 +26,7 @@ const Field = ({ x, y }) => {
       />
       <AddText lenght={x} isWidth={true} />
       <AddText lenght={y} isWidth={false} />
+      <Uve />
     </svg>
   );
 };

@@ -18,7 +18,8 @@ const AddText = ({ lenght, isWidth }) => {
           {console.log(`meter ${meter}, isWidth ${isWidth}`)}
           <text
             x={isWidth ? meter * 10 : "0 "}
-            y={isWidth ? "20" : meter * 10}
+            y={isWidth ? "10" : meter * 10 - 2}
+            fontSize={10}
             key={() => {
               let key = isWidth ? `${meter}x` : `${meter}y`;
               console.log(key);
@@ -27,12 +28,12 @@ const AddText = ({ lenght, isWidth }) => {
             {meter}m
           </text>
           <line
-            x1={isWidth ? meter * 10 : "0 "}
+            x1={isWidth ? meter * 10 : "0"}
             x2={isWidth ? meter * 10 : "20 "}
             y1={isWidth ? "0" : meter * 10}
             y2={isWidth ? "20" : meter * 10}
             stroke="blue"
-            strokeWidth="3"
+            strokeWidth="2"
           />
         </>
       ))}
