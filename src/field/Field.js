@@ -26,7 +26,7 @@ const Field = ({ x, y }) => {
       />
       <AddText lenght={x} isWidth={true} />
       <AddText lenght={y} isWidth={false} />
-      <Uve />
+      <Uve startX={10} startY={10} metersFromStartToBariers={5} />
     </svg>
   );
 };
