@@ -1,56 +1,22 @@
-const Uve = () => {
+import FieldPattern from "../field/FieldPattern";
+import ConesMarker from "../svg_shapes/ConesMarker";
+import DumbbellMarker from "../svg_shapes/DumbbellMarker";
+import StartMarker from "../svg_shapes/StartMarker";
+const Uve = ({ startX, startY, metersFromStartToBariiers }) => {
+  const parameters = {
+    startX: startX * 10,
+    startY: startY * 10,
+    metersFromStartToBariiers: metersFromStartToBariiers * 10,
+  };
+
   return (
     <g transform="rotate(90 90, 90)">
       <defs>
-        <pattern
-          id="meter"
-          width="10"
-          height="10"
-          patternUnits="userSpaceOnUse"
-        >
-          <line x1="0" y1="0" x2="0" y2="10" stroke="blue" />
-          <line x1="0" y1="0" x2="10" y2="0" stroke="blue" />
-        </pattern>
-        <marker
-          id="start"
-          viewBox="0 0 10 10"
-          refX="5"
-          refY="5"
-          markerWidth="10"
-          markerHeight="10"
-          orient="auto-start-reverse"
-          markerUnits="userSpaceOnUse"
-        >
-          <circle r="4" cx="5" cy="5" stroke="red" fill="yellow" />
-        </marker>
-        <marker
-          id="dumbbell"
-          viewBox="0 0 4 4"
-          refX="2"
-          refY="2"
-          markerWidth="4"
-          markerHeight="4"
-          orient="auto-start-reverse"
-          markerUnits="userSpaceOnUse"
-        >
-          <circle r="1" cx="2" cy="2" fill="black" />
-        </marker>
-        <marker
-          id="cones"
-          viewBox="0 0 30 30"
-          refX="0"
-          refY="15"
-          markerWidth="20"
-          markerHeight="20"
-          orient="auto-start-reverse"
-          markerUnits="userSpaceOnUse"
-        >
-          <polygon points="0,15 15,15 7,0" fill="purple" />
-          <polygon points="15,15 30,15 22,0" fill="blue" />
-          <polygon points="7.5,30 22.5,30 15,15" fill="orange" />
-        </marker>
+        <FieldPattern />
+        <StartMarker />
+        <DumbbellMarker />
+        <ConesMarker />
       </defs>
-
       <line
         x1="20"
         x2="220"
