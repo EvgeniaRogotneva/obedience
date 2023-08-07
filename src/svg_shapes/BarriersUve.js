@@ -8,7 +8,7 @@ const BarriersUve = ({ x1, x2, y1, y2 }) => {
       stroke="black"
       strokeWidth="1"
       strokeLinecap="round"
-      strokeDasharray="15 40"
+      strokeDasharray="10 50"
     />
   );
 };

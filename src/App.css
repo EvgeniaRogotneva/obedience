@@ -1,7 +1,20 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-link {
   color: #61dafb;
+}
+.leftMenu {
+  display: inline-block;
+  vertical-align: top;
+}
+.Field {
+  display: inline-block;
+  vertical-align: top;
+}
+.DogObedienceStewartToolHeader {
+  text-align: center;
+  font-size: x-large;
+  font-weight: 400;
 }
