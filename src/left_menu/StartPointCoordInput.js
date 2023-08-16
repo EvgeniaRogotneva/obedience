@@ -1,4 +1,10 @@
-const StartPointCoordInput = ({ max, min, valueX, valueY }) => {
+import { useContext } from "react";
+import { Context } from "../state/Context";
+
+const StartPointCoordInput = () => {
+  const value = useContext(Context);
+  const [state] = value;
+
   return (
     <>
       X:{" "}
@@ -6,18 +12,18 @@ const StartPointCoordInput = ({ max, min, valueX, valueY }) => {
         className="start-point-coord-input-x"
         type="number"
         label="X"
-        min={min}
-        max={max}
-        value={valueX}
+        min={state.fieldSize.min}
+        max={state.fieldSize.max}
+        value={state.fieldSize.valueX}
       />
       Y:{" "}
       <input
         className="start-point-coord-input-y"
         type="number"
         label="Y"
-        min={min}
-        max={max}
-        value={valueY}
+        min={state.fieldSize.min}
+        max={state.fieldSize.max}
+        value={state.fieldSize.valueY}
       />
       <button className="submit-coord">Ok</button>
     </>
