@@ -1,10 +1,9 @@
 import { useContext } from "react";
 import { Context } from "../state/Context";
-import Uve from "../svg_exercise/Uve";
 import AddText from "./AddMeters";
 import FieldPattern from "./FieldPattern";
 
-const Field = () => {
+const Field = ({ children }) => {
   const value = useContext(Context);
   const [state] = value;
   const fieldWidth = state.field.coord.valueX * 10;
@@ -29,11 +28,7 @@ const Field = () => {
       />
       <AddText lenght={state.field.coord.valueX} isWidth={true} />
       <AddText lenght={state.field.coord.valueY} isWidth={false} />
-      <Uve
-        startX={state.Uve.coord.valueX}
-        startY={state.Uve.coord.valueY}
-        metersFromStartToBariers={5}
-      />
+      {children}
     </svg>
   );
 };
