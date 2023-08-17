@@ -1,7 +1,8 @@
 import { createContext, useReducer } from "react";
 export const Context = createContext();
 const initialState = {
-  fieldSize: { valueX: 50, valueY: 50, min: 10, max: 100 },
+  fieldSize: { valueX: 50, valueY: 50 },
+  fieldSizeLimit: { min: 10, max: 100 },
   Uve: { start: { x: 50, y: 50 }, rotation: 0 },
 };
 

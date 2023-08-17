@@ -1,13 +1,13 @@
 import { Menu, Sidebar, SubMenu } from "react-pro-sidebar";
 
-import { useContext } from "react";
-import { Context } from "../state/Context";
+// import { useContext } from "react";
+// import { Context } from "../state/Context";
 import Rotation from "./Rotation";
 import StartPointCoordInput from "./StartPointCoordInput";
 
 const LeftMenu = () => {
-  const value = useContext(Context);
-  const [state, dispatch] = value;
+  // const value = useContext(Context);
+  // const [state, dispatch] = value;
   return (
     <>
       <Sidebar className="leftMenu">
@@ -16,7 +16,7 @@ const LeftMenu = () => {
             <StartPointCoordInput />
           </SubMenu>
           <SubMenu label="Uve">
-            <StartPointCoordInput min={0} max={100} />
+            <StartPointCoordInput />
             <Rotation />
           </SubMenu>
           <SubMenu label="Selfcontrol"></SubMenu>

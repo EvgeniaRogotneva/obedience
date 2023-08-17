@@ -3,14 +3,14 @@ import "./App.css";
 import Field from "./field/Field";
 import LeftMenu from "./left_menu/LeftMenu";
 function App() {
-  const [fieldSize, setFieldSize] = useState({ x: 60, y: 20 });
+  const [fieldSize, setFieldSize] = useState({ valueX: 60, valueY: 20 });
   return (
     <div className="App">
       <h1 className="DogObedienceStewartToolHeader">
         Dog Obedience Stewart Tool
       </h1>
       <LeftMenu />
-      <Field x={fieldSize["x"]} y={fieldSize["y"]} />
+      <Field x={fieldSize["valueX"]} y={fieldSize["valueY"]} />
 
       <p>
         следующий шаг - передавать размер поля и координаты для точки старта из
