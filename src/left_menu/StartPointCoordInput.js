@@ -1,20 +1,20 @@
 import { useContext, useState } from "react";
 import { Context } from "../state/Context";
 
-const StartPointCoordInput = () => {
+const StartPointCoordInput = ({ type }) => {
   const value = useContext(Context);
   const [state, dispatch] = value;
 
   const [inputX, setInputX] = useState(50);
   const [inputY, setInputY] = useState(50);
 
-  const setCoord = () => {
+  const setCoord = ({ type }) => {
+    console.log(`inside setCoord ${type}`);
     dispatch({
-      type: "setFieldSize",
-      payload: { size: { valueX: inputX, valueY: inputY } },
+      type: type,
+      payload: { coord: { valueX: inputX, valueY: inputY } },
     });
   };
-
   return (
     <>
       X:{" "}
@@ -24,7 +24,7 @@ const StartPointCoordInput = () => {
         label="X"
         min={state.field.limit.min}
         max={state.field.limit.max}
-        placeholder={state.field.size.valueX}
+        placeholder={state.field.coord.valueX}
         onChange={(e) => setInputX(e.target.value)}
       />
       Y:{" "}
@@ -34,10 +34,17 @@ const StartPointCoordInput = () => {
         label="Y"
         min={state.field.limit.min}
         max={state.field.limit.max}
-        placeholder={state.field.size.valueY}
+        placeholder={state.field.coord.valueY}
         onChange={(e) => setInputY(e.target.value)}
       />
-      <button className="submit-coord" onClick={setCoord}>
+      <button
+        className="submit-coord"
+        onClick={() => {
+          console.log(`inside onClick ${type}`);
+
+          setCoord({ type });
+        }}
+      >
         Ok
       </button>
     </>

@@ -1,10 +1,17 @@
+import { useContext } from "react";
+import { Context } from "../state/Context";
 import Uve from "../svg_exercise/Uve";
 import AddText from "./AddMeters";
 import FieldPattern from "./FieldPattern";
+
 const Field = ({ x, y }) => {
+  const value = useContext(Context);
+  const [state] = value;
   const fieldWidth = x * 10;
   const fieldHeight = y * 10;
   const viewBox = `0 0 ${fieldWidth} ${fieldHeight}`;
+  console.log(` X ${state.Uve.coord.valueX}`);
+  console.log(` Y ${state.Uve.coord.valueY}`);
 
   return (
     <svg
@@ -24,7 +31,11 @@ const Field = ({ x, y }) => {
       />
       <AddText lenght={x} isWidth={true} />
       <AddText lenght={y} isWidth={false} />
-      <Uve startX={10} startY={10} metersFromStartToBariers={5} />
+      <Uve
+        startX={state.Uve.coord.valueX}
+        startY={state.Uve.coord.valueY}
+        metersFromStartToBariers={5}
+      />
     </svg>
   );
 };

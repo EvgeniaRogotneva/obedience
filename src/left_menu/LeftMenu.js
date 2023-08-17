@@ -8,15 +8,19 @@ import StartPointCoordInput from "./StartPointCoordInput";
 const LeftMenu = () => {
   // const value = useContext(Context);
   // const [state, dispatch] = value;
+  const setFieldSize = "setFieldSize";
+  const setUveData = "setUveData";
+  console.log(`inside LeftMenu ${setFieldSize}  and ${setUveData}`);
+
   return (
     <>
       <Sidebar className="leftMenu">
         <Menu>
           <SubMenu label="Field size">
-            <StartPointCoordInput />
+            <StartPointCoordInput type={setFieldSize} />
           </SubMenu>
           <SubMenu label="Uve">
-            <StartPointCoordInput />
+            <StartPointCoordInput type={setUveData} />
             <Rotation />
           </SubMenu>
           <SubMenu label="Selfcontrol"></SubMenu>

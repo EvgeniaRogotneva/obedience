@@ -1,8 +1,8 @@
 import { createContext, useReducer } from "react";
 export const Context = createContext();
 const initialState = {
-  field: { size: { valueX: 50, valueY: 50 }, limit: { min: 10, max: 100 } },
-  Uve: { start: { x: 50, y: 50 }, rotation: 0 },
+  field: { coord: { valueX: 50, valueY: 50 }, limit: { min: 10, max: 100 } },
+  Uve: { coord: { valueX: 50, valueY: 50 }, rotation: 0 },
 };
 
 function reducer(state, action) {
@@ -10,12 +10,12 @@ function reducer(state, action) {
     case "setFieldSize":
       return {
         ...state,
-        field: { ...state.field, size: action.payload.size },
+        field: { ...state.field, coord: action.payload.coord },
       };
     case "setUveData":
       return {
         ...state,
-        Uve: action.payload.Uve,
+        Uve: { ...state.Uve, coord: action.payload.coord },
       };
     default:
       return state;
