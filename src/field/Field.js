@@ -4,14 +4,12 @@ import Uve from "../svg_exercise/Uve";
 import AddText from "./AddMeters";
 import FieldPattern from "./FieldPattern";
 
-const Field = ({ x, y }) => {
+const Field = () => {
   const value = useContext(Context);
   const [state] = value;
-  const fieldWidth = x * 10;
-  const fieldHeight = y * 10;
+  const fieldWidth = state.field.coord.valueX * 10;
+  const fieldHeight = state.field.coord.valueY * 10;
   const viewBox = `0 0 ${fieldWidth} ${fieldHeight}`;
-  console.log(` X ${state.Uve.coord.valueX}`);
-  console.log(` Y ${state.Uve.coord.valueY}`);
 
   return (
     <svg
@@ -29,8 +27,8 @@ const Field = ({ x, y }) => {
         width={fieldWidth}
         height={fieldHeight}
       />
-      <AddText lenght={x} isWidth={true} />
-      <AddText lenght={y} isWidth={false} />
+      <AddText lenght={state.field.coord.valueX} isWidth={true} />
+      <AddText lenght={state.field.coord.valueY} isWidth={false} />
       <Uve
         startX={state.Uve.coord.valueX}
         startY={state.Uve.coord.valueY}
