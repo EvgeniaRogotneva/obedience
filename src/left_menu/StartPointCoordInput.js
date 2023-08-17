@@ -11,7 +11,7 @@ const StartPointCoordInput = () => {
   const setCoord = () => {
     dispatch({
       type: "setFieldSize",
-      payload: { fieldSize: { valueX: inputX, valueY: inputY } },
+      payload: { size: { valueX: inputX, valueY: inputY } },
     });
   };
 
@@ -22,9 +22,9 @@ const StartPointCoordInput = () => {
         className="start-point-coord-input-x"
         type="number"
         label="X"
-        min={state.fieldSizeLimit.min}
-        max={state.fieldSizeLimit.max}
-        placeholder={state.fieldSize.valueX}
+        min={state.field.limit.min}
+        max={state.field.limit.max}
+        placeholder={state.field.size.valueX}
         onChange={(e) => setInputX(e.target.value)}
       />
       Y:{" "}
@@ -32,9 +32,9 @@ const StartPointCoordInput = () => {
         className="start-point-coord-input-y"
         type="number"
         label="Y"
-        min={state.fieldSizeLimit.min}
-        max={state.fieldSizeLimit.max}
-        placeholder={state.fieldSize.valueY}
+        min={state.field.limit.min}
+        max={state.field.limit.max}
+        placeholder={state.field.size.valueY}
         onChange={(e) => setInputY(e.target.value)}
       />
       <button className="submit-coord" onClick={setCoord}>
