@@ -1,19 +1,24 @@
+import { useContext } from "react";
 import FieldPattern from "../field/FieldPattern";
+import { Context } from "../state/Context";
 import BarriersUve from "../svg_shapes/BarriersUve";
 import ConesMarker from "../svg_shapes/ConesMarker";
 import DumbbellLine from "../svg_shapes/DumbbellLine";
 import DumbbellMarker from "../svg_shapes/DumbbellMarker";
 import StartConesLine from "../svg_shapes/StartConesLine";
 import StartMarker from "../svg_shapes/StartMarker";
-const Uve = ({ startX, startY, metersFromStartToBariers }) => {
+
+const Uve = ({ metersFromStartToBariers }) => {
+  const value = useContext(Context);
+  const [state] = value;
   const lenghtFromBarriersToCones = 150;
   const lenghtFromMiddleLineToBarrier = 35;
   const lenghtFromBarriersToDumbbell = 60;
   const lenghtFromMiddleLineToDumbbell = 30;
   const lenghtDumbbell = 5;
   const entranceParam = {
-    startX: startX * 10,
-    startY: startY * 10,
+    startX: state.Uve.coord.valueX * 10,
+    startY: state.Uve.coord.valueY * 10,
     fromStartToBariiers: metersFromStartToBariers * 10,
   };
 
