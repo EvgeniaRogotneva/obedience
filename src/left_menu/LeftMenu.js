@@ -7,7 +7,7 @@ const LeftMenu = () => {
   const setFieldSize = "setFieldSize";
   const setUveData = "setUveData";
   const setUveRoration = "setUveRoration";
-  const setUve = "setUve";
+  const switchOffUve = "switchOffUve";
   console.log(`inside LeftMenu ${setFieldSize}  and ${setUveData}`);
 
   return (
@@ -20,7 +20,7 @@ const LeftMenu = () => {
           <SubMenu label="Uve">
             <StartPointCoordInput type={setUveData} />
             <Rotation type={setUveRoration} />
-            <Trash type={setUve} />
+            <Trash type={switchOffUve} />
           </SubMenu>
           <SubMenu label="Selfcontrol"></SubMenu>
           <SubMenu label="Complex"></SubMenu>

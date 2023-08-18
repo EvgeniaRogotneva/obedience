@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import "./App.css";
 import Field from "./field/Field";
 import LeftMenu from "./left_menu/LeftMenu";
+import { Context } from "./state/Context";
 import Uve from "./svg_exercise/Uve";
 
 function App() {
+  const [state] = useContext(Context);
   return (
     <div className="App">
       <h1 className="DogObedienceStewartToolHeader">
@@ -11,7 +14,8 @@ function App() {
       </h1>
       <LeftMenu />
       <Field>
-        <Uve metersFromStartToBariers={5} />
+        {state.Uve.on && <Uve metersFromStartToBariers={5} />}
+        {/* {if(state.Uve.on) {return( <Uve metersFromStartToBariers={5} />)}} */}
       </Field>
 
       <p>когда у Уве меняешь одну координату, вторая выставляется в 50</p>
@@ -20,7 +24,7 @@ function App() {
         быть любое
       </p>
       <p>а еще надо всплывающую подсказку сделать на поле с координатами</p>
-      <p>Добавить кнопку Удалить упражнение</p>
+      <p>при удалении упражнения скидывать данные в полях </p>
     </div>
   );
 }
