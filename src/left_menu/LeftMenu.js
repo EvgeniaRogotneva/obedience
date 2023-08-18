@@ -1,16 +1,13 @@
 import { Menu, Sidebar, SubMenu } from "react-pro-sidebar";
-
-// import { useContext } from "react";
-// import { Context } from "../state/Context";
 import Rotation from "./Rotation";
 import StartPointCoordInput from "./StartPointCoordInput";
+import Trash from "./Trash";
 
 const LeftMenu = () => {
-  // const value = useContext(Context);
-  // const [state, dispatch] = value;
   const setFieldSize = "setFieldSize";
   const setUveData = "setUveData";
   const setUveRoration = "setUveRoration";
+  const setUve = "setUve";
   console.log(`inside LeftMenu ${setFieldSize}  and ${setUveData}`);
 
   return (
@@ -23,6 +20,7 @@ const LeftMenu = () => {
           <SubMenu label="Uve">
             <StartPointCoordInput type={setUveData} />
             <Rotation type={setUveRoration} />
+            <Trash type={setUve} />
           </SubMenu>
           <SubMenu label="Selfcontrol"></SubMenu>
           <SubMenu label="Complex"></SubMenu>
