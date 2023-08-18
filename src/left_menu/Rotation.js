@@ -16,6 +16,7 @@ const Rotation = ({ type }) => {
 
   return (
     <>
+      <br />
       Degree:{" "}
       <input
         type="number"
