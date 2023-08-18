@@ -2,7 +2,7 @@ import { createContext, useReducer } from "react";
 export const Context = createContext();
 const initialState = {
   field: { coord: { valueX: 50, valueY: 50 }, limit: { min: 10, max: 100 } },
-  Uve: { coord: { valueX: 50, valueY: 50 }, rotation: 0 },
+  Uve: { coord: { valueX: 10, valueY: 10 }, rotation: 0 },
 };
 
 function reducer(state, action) {
@@ -16,6 +16,11 @@ function reducer(state, action) {
       return {
         ...state,
         Uve: { ...state.Uve, coord: action.payload.coord },
+      };
+    case "setUveRoration":
+      return {
+        ...state,
+        Uve: { ...state.Uve, rotation: action.payload.rotation },
       };
     default:
       return state;

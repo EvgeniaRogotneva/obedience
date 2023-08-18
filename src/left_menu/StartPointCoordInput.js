@@ -9,7 +9,6 @@ const StartPointCoordInput = ({ type }) => {
   const [inputY, setInputY] = useState(50);
 
   const setCoord = ({ type }) => {
-    console.log(`inside setCoord ${type}`);
     dispatch({
       type: type,
       payload: { coord: { valueX: inputX, valueY: inputY } },
@@ -24,7 +23,7 @@ const StartPointCoordInput = ({ type }) => {
         label="X"
         min={state.field.limit.min}
         max={state.field.limit.max}
-        placeholder={state.field.coord.valueX}
+        // placeholder={state.field.coord.valueX}
         onChange={(e) => setInputX(e.target.value)}
       />
       Y:{" "}
@@ -34,14 +33,12 @@ const StartPointCoordInput = ({ type }) => {
         label="Y"
         min={state.field.limit.min}
         max={state.field.limit.max}
-        placeholder={state.field.coord.valueY}
+        // placeholder={state.field.coord.valueY}
         onChange={(e) => setInputY(e.target.value)}
       />
       <button
         className="submit-coord"
         onClick={() => {
-          console.log(`inside onClick ${type}`);
-
           setCoord({ type });
         }}
       >

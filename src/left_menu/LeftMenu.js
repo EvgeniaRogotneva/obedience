@@ -10,6 +10,7 @@ const LeftMenu = () => {
   // const [state, dispatch] = value;
   const setFieldSize = "setFieldSize";
   const setUveData = "setUveData";
+  const setUveRoration = "setUveRoration";
   console.log(`inside LeftMenu ${setFieldSize}  and ${setUveData}`);
 
   return (
@@ -21,7 +22,7 @@ const LeftMenu = () => {
           </SubMenu>
           <SubMenu label="Uve">
             <StartPointCoordInput type={setUveData} />
-            <Rotation />
+            <Rotation type={setUveRoration} />
           </SubMenu>
           <SubMenu label="Selfcontrol"></SubMenu>
           <SubMenu label="Complex"></SubMenu>

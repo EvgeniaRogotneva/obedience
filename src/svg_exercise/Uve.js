@@ -58,9 +58,14 @@ const Uve = ({ metersFromStartToBariers }) => {
       entranceParam["startY"] + lenghtFromMiddleLineToDumbbell - lenghtDumbbell,
   };
 
+  const rotation = `rotate(${state.Uve.rotation} ,0, ${state.Uve.coord.valueY})`;
+  // const rotation = `rotate(90, 10,10)`;
+
+  console.log(` rotation ${rotation}`);
+
   return (
-    <g>
-      {/* transform="rotate(90 90, 90)" */}
+    <g transform={rotation}>
+      {/* <g transform="rotate(90, 10, 10)"> */}
       <defs>
         <FieldPattern />
         <StartMarker />
