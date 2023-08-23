@@ -13,10 +13,7 @@ function App() {
         Dog Obedience Stewart Tool
       </h1>
       <LeftMenu />
-      <Field>
-        {state.Uve.on && <Uve metersFromStartToBariers={5} />}
-        {/* {if(state.Uve.on) {return( <Uve metersFromStartToBariers={5} />)}} */}
-      </Field>
+      <Field>{state.Uve.on && <Uve metersFromStartToBariers={5} />}</Field>
 
       <p>когда у Уве меняешь одну координату, вторая выставляется в 50</p>
       <p>
