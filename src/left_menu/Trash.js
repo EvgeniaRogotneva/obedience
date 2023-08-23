@@ -5,7 +5,7 @@ import { Context } from "../state/Context";
 import "./leftMenu.css";
 
 const Trash = ({ type }) => {
-  const [dispatch] = useContext(Context);
+  const [state, dispatch] = useContext(Context);
 
   const switchOfExercise = ({ type }) => {
     dispatch({

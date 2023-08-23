@@ -4,7 +4,7 @@ import { Context } from "../state/Context";
 import "./leftMenu.css";
 
 const Rotation = ({ type }) => {
-  const [dispatch] = useContext(Context);
+  const [state, dispatch] = useContext(Context);
   const [degree, setDegree] = useState(0);
 
   const setDegreeToState = ({ type }) => {
