@@ -3,6 +3,7 @@ export const Context = createContext();
 const initialState = {
   field: { coord: { valueX: 50, valueY: 50 }, limit: { min: 10, max: 100 } },
   Uve: { on: false, coord: { valueX: 10, valueY: 10 }, rotation: 0 },
+  choosedClass: 0,
 };
 
 function reducer(state, action) {
@@ -26,6 +27,11 @@ function reducer(state, action) {
       return {
         ...state,
         Uve: { ...state.Uve, on: false },
+      };
+    case "setChoosedClass":
+      return {
+        ...state,
+        choosedClass: action.payload.choosedClass,
       };
     default:
       return state;

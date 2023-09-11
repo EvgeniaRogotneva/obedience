@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import "./index.css";
+import ObdClasses from "./newMenu/newMenu";
 import Provider from "./state/Context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider>
     <React.StrictMode>
-      <App />
+      <ObdClasses />
     </React.StrictMode>
   </Provider>
 );
