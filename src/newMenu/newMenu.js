@@ -64,7 +64,9 @@ const ObdClasses = () => {
           }}
           <Button
             className="list-group-item list-group-item-action"
-            onClick={() => setChoosedClass(0)}
+            onClick={() => {
+              setChoosedClass({ choosedClass: 0 });
+            }}
           >
             Change class
           </Button>
