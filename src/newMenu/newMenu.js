@@ -1,8 +1,11 @@
 import { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/esm/Col";
+import Row from "react-bootstrap/esm/Row";
+import Field from "../field/Field";
 import { Context } from "../state/Context";
+import ChangeClassMenu from "./ChangeClassMenu";
 
 const ObdClasses = () => {
   const [state, dispatch] = useContext(Context);
@@ -17,7 +20,7 @@ const ObdClasses = () => {
   if (state.choosedClass === 0) {
     return (
       <Container>
-        <h1 className="text-primary">Choose obedience class</h1>
+        <h4 className="text-primary">Choose obedience class</h4>
 
         <ul className="list-group list-group-horizontal-md list-group-flush ">
           <li className="list-group-item">
@@ -56,26 +59,53 @@ const ObdClasses = () => {
   }
   if (state.choosedClass === 1) {
     return (
-      <Container>
-        <Row>
-          Choosed Class:{" "}
-          {() => {
-            return state.choosedClass;
-          }}
-          <Button
-            className="list-group-item list-group-item-action"
-            onClick={() => {
-              setChoosedClass({ choosedClass: 0 });
-            }}
-          >
-            Change class
-          </Button>
-        </Row>
-        <Row></Row>
-      </Container>
+      <ChangeClassMenu>
+        <Row>Children1</Row>
+      </ChangeClassMenu>
     );
   } else if (state.choosedClass === 2) {
+    return <ChangeClassMenu>Children2</ChangeClassMenu>;
   } else if (state.choosedClass === 3) {
+    return (
+      <ChangeClassMenu>
+        <Container className="d-inline">
+          <Row>
+            <Col xs={2}>
+              <h6> This is a menu with exercises</h6>
+              <Button>
+                <svg
+                  width="50"
+                  height="100"
+                  viewBox="0 0 40 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="0"
+                    x2="100"
+                    y1="25"
+                    y2="25"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </Button>
+              <Button>Complex</Button>
+              <Button>Square</Button>
+              <Button>Aport</Button>
+              <Button>Recall</Button>
+              <Button>Heelwork</Button>
+              <Button>Positions</Button>
+              <Button>Selfcontrol</Button>
+              <Button>Viborka</Button>
+            </Col>
+            <Col>
+              <Field />
+            </Col>
+          </Row>
+        </Container>
+      </ChangeClassMenu>
+    );
   }
 };
 
