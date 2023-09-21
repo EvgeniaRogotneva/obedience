@@ -1,14 +1,13 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { Context } from "../state/Context";
-import FieldRange from "./FieldRange";
 
-const ChangeClassMenu = ({ children }) => {
+const ChangeClassMenu = () => {
   const [state, dispatch] = useContext(Context);
-  const [fieldSize, setFieldSize] = useState(false);
+  // const [fieldSize, setFieldSize] = useState(false);
   const setChoosedClass = ({ choosedClass }) => {
     dispatch({
       type: "setChoosedClass",
@@ -33,16 +32,7 @@ const ChangeClassMenu = ({ children }) => {
             Change class
           </Button>
         </Col>
-        <Col>
-          <p>Field Width in meters: </p>
-          <FieldRange label="xRange" />
-        </Col>
-        <Col>
-          <p>Field Length in meters: </p>
-          <FieldRange label="yRange" />
-        </Col>
       </Row>
-      {children}
     </Container>
   );
 };

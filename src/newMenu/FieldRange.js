@@ -5,25 +5,20 @@ import Col from "react-bootstrap/esm/Col";
 import Row from "react-bootstrap/esm/Row";
 import { Context } from "../state/Context";
 
-function FieldRange({ label }) {
-  const [value, setValue] = useState(50);
+function FieldRange({ label, type }) {
   const [state, dispatch] = useContext(Context);
+  const [value, setValue] = useState(50);
 
-  const setChoosedClass = ({ choosedClass }) => {
+  const setFieldSide = ({ type, value }) => {
     dispatch({
-      type: "setChoosedClass",
-      payload: { choosedClass: choosedClass },
+      type: type,
+      payload: { value: value },
     });
   };
 
-  const [inputX, setInputX] = useState(50);
-  const [inputY, setInputY] = useState(50);
-
-  const setCoord = ({ type }) => {
-    dispatch({
-      type: type,
-      payload: { coord: { valueX: inputX, valueY: inputY } },
-    });
+  const connectFieldSizeEverywhere = (e) => {
+    setValue(e.target.value);
+    setFieldSide(type, value);
   };
 
   return (
@@ -32,13 +27,18 @@ function FieldRange({ label }) {
         <Col xs="9">
           <RangeSlider
             value={value}
-            onChange={(e) => setValue(e.target.value)}
+            onChange={(e) => connectFieldSizeEverywhere(e)}
             min={10}
             max={100}
           />
         </Col>
         <Col xs="3">
-          <Form.Control value={value} min={10} max={100} />
+          <Form.Control
+            value={value}
+            min={10}
+            max={100}
+            onChange={(e) => connectFieldSizeEverywhere(e)}
+          />
         </Col>
       </Form.Group>
     </Form>
