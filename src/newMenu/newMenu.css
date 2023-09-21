@@ -1,0 +1,20 @@
+.yRange {
+  background-color: pink;
+  /* align-items: flex-end;
+  display: inline-flex;
+  height: min-content; */
+  /* transform: translate(0, 180px) rotate(90deg); */
+}
+
+.xRange {
+  display: inline-flexbox;
+  background-color: lightskyblue;
+}
+
+.Box {
+  background-color: yellow;
+}
+
+/* .FieldRange {
+  transform: rotate(90deg);
+} */

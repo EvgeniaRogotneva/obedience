@@ -6,6 +6,7 @@ import Row from "react-bootstrap/esm/Row";
 import Field from "../field/Field";
 import { Context } from "../state/Context";
 import ChangeClassMenu from "./ChangeClassMenu";
+import "./newMenu.css";
 
 const ObdClasses = () => {
   const [state, dispatch] = useContext(Context);
@@ -72,24 +73,7 @@ const ObdClasses = () => {
           <Row>
             <Col xs={2}>
               <h6> This is a menu with exercises</h6>
-              <Button>
-                <svg
-                  width="50"
-                  height="100"
-                  viewBox="0 0 40 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <line
-                    x1="0"
-                    x2="100"
-                    y1="25"
-                    y2="25"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </Button>
+              <Button>Uve</Button>
               <Button>Complex</Button>
               <Button>Square</Button>
               <Button>Aport</Button>
