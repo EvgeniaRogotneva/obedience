@@ -18,7 +18,7 @@ function FieldRange({ label, type }) {
 
   const connectFieldSizeEverywhere = (e) => {
     setValue(e.target.value);
-    setFieldSide(type, value);
+    setFieldSide({ type, value });
   };
 
   return (
