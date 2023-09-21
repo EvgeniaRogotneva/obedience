@@ -24,19 +24,19 @@ function FieldRange({ label, type }) {
   return (
     <Form>
       <Form.Group as={Row}>
-        <Col xs="9">
+        <Col xs="10">
           <RangeSlider
             value={value}
             onChange={(e) => connectFieldSizeEverywhere(e)}
-            min={10}
-            max={100}
+            min={state.field.limit.min}
+            max={state.field.limit.max}
           />
         </Col>
-        <Col xs="3">
+        <Col xs="2">
           <Form.Control
             value={value}
-            min={10}
-            max={100}
+            min={state.field.limit.min}
+            max={state.field.limit.max}
             onChange={(e) => connectFieldSizeEverywhere(e)}
           />
         </Col>
