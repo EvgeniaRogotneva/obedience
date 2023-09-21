@@ -18,7 +18,7 @@ const ChangeClassMenu = () => {
     <Container>
       <Row>
         <Col className="text-primary ">
-          <p>Choosed Class: {state.choosedClass}</p>
+          <h4 className="text-primary">Choosed Class: {state.choosedClass}</h4>
         </Col>
         <Col>
           <Button

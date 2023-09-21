@@ -1,5 +1,6 @@
 import Col from "react-bootstrap/esm/Col";
 import FieldRange from "../FieldRange";
+import "./Header.css";
 
 const FieldSizeSliders = () => {
   const setFieldSizeX = "setFieldSizeX";
@@ -7,12 +8,12 @@ const FieldSizeSliders = () => {
 
   return (
     <>
-      <Col>
-        <p>Field Width in meters: </p>
+      <Col className="FieldRangeCol">
+        <p>Width:</p>
         <FieldRange label="xRange" type={setFieldSizeX} />
       </Col>
-      <Col>
-        <p>Field Length in meters: </p>
+      <Col className="FieldRangeCol">
+        <p>Length: </p>
         <FieldRange label="yRange" type={setFieldSizeY} />
       </Col>
     </>
