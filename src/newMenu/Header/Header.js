@@ -17,7 +17,11 @@ const Header = () => {
     <Container className="Header">
       <Row>
         <Col>
-          {state.choosedClass === 0 ? <ChooseClass /> : <ChangeClassMenu />}
+          {state.class.chosenClass === 0 ? (
+            <ChooseClass />
+          ) : (
+            <ChangeClassMenu />
+          )}
         </Col>
         <Col>
           <FieldSizeSliders />

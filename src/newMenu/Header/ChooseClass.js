@@ -6,22 +6,21 @@ import { Context } from "../../state/Context";
 const ChooseClass = () => {
   const [state, dispatch] = useContext(Context);
 
-  const setChoosedClass = ({ choosedClass }) => {
+  const setChosenClass = ({ chosenClass }) => {
     dispatch({
-      type: "setChoosedClass",
-      payload: { choosedClass: choosedClass },
+      type: "setChosenClass",
+      payload: { chosenClass: chosenClass },
     });
   };
   return (
     <Container>
       <h4 className="text-primary">Choose obedience class</h4>
-
       <ul className="list-group list-group-horizontal-md list-group-flush ">
         <li className="list-group-item">
           <Button
             className="list-group-item list-group-item-action"
             onClick={() => {
-              setChoosedClass({ choosedClass: 1 });
+              setChosenClass({ chosenClass: 1 });
             }}
           >
             the 1st
@@ -31,7 +30,7 @@ const ChooseClass = () => {
           <Button
             className="list-group-item list-group-item-action"
             onClick={() => {
-              setChoosedClass({ choosedClass: 2 });
+              setChosenClass({ chosenClass: 2 });
             }}
           >
             the 2nd
@@ -41,7 +40,7 @@ const ChooseClass = () => {
           <Button
             className="list-group-item list-group-item-action"
             onClick={() => {
-              setChoosedClass({ choosedClass: 3 });
+              setChosenClass({ chosenClass: 3 });
             }}
           >
             the 3rd

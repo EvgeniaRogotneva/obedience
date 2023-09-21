@@ -12,18 +12,18 @@ import "./newMenu.css";
 const ObdClasses = () => {
   const [state, dispatch] = useContext(Context);
 
-  if (state.choosedClass === 0) {
+  if (state.class.chosenClass === 0) {
     return <ChooseClass />;
   }
-  if (state.choosedClass === 1) {
+  if (state.class.chosenClass === 1) {
     return (
       <ChangeClassMenu>
         <Row>Children1</Row>
       </ChangeClassMenu>
     );
-  } else if (state.choosedClass === 2) {
+  } else if (state.class.chosenClass === 2) {
     return <ChangeClassMenu>Children2</ChangeClassMenu>;
-  } else if (state.choosedClass === 3) {
+  } else if (state.class.chosenClass === 3) {
     return (
       <ChangeClassMenu>
         <Container className="d-inline">
@@ -51,21 +51,3 @@ const ObdClasses = () => {
 };
 
 export default ObdClasses;
-
-{
-  /* <Router>
-        <div class="conteiner bg-primary text-white px-2 py-1 rounded-2 ">
-          {" "}
-          Choose class:
-          <NavLink to="/" class="bg-info d-inline rounded-2 px-2 py-1 m-auto">
-            1
-          </NavLink>
-          <NavLink to="/" class="bg-info d-inline rounded-2 px-2 py-1 m-auto">
-            2
-          </NavLink>
-          <NavLink to="/" class="bg-info d-inline rounded-2 px-2 py-1 m-auto">
-            3
-          </NavLink>
-        </div>
-      </Router> */
-}

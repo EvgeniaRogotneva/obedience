@@ -7,7 +7,12 @@ import { Context } from "../state/Context";
 
 function FieldRange({ label, type }) {
   const [state, dispatch] = useContext(Context);
-  const [value, setValue] = useState(50);
+  console.log(type);
+  const [value, setValue] = useState(
+    type === "setFieldSizeX"
+      ? state.field.coord.valueX
+      : state.field.coord.valueY
+  );
 
   const setFieldSide = ({ type, value }) => {
     dispatch({

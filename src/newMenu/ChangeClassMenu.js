@@ -7,10 +7,10 @@ import { Context } from "../state/Context";
 
 const ChangeClassMenu = () => {
   const [state, dispatch] = useContext(Context);
-  const setChoosedClass = ({ choosedClass }) => {
+  const setChosenClass = ({ chosenClass }) => {
     dispatch({
-      type: "setChoosedClass",
-      payload: { choosedClass: choosedClass },
+      type: "setChosenClass",
+      payload: { chosenClass: chosenClass },
     });
   };
 
@@ -18,14 +18,16 @@ const ChangeClassMenu = () => {
     <Container>
       <Row>
         <Col className="text-primary ">
-          <h4 className="text-primary">Choosed Class: {state.choosedClass}</h4>
+          <h4 className="text-primary">
+            Choosed Class: {state.class.chosenClass}
+          </h4>
         </Col>
         <Col>
           <Button
             className="w-10 flex-fill btn-sm"
             variant="outline-primary"
             onClick={() => {
-              setChoosedClass({ choosedClass: 0 });
+              setChosenClass({ chosenClass: 0 });
             }}
           >
             Change class
