@@ -9,15 +9,25 @@ const initialState = {
 function reducer(state, action) {
   switch (action.type) {
     case "setFieldSizeX":
-      let newState = state;
-      newState.field.coord.valueX = action.payload.value;
-      return newState;
+      return {
+        ...state,
+        field: {
+          ...state.field,
+          coord: {
+            valueX: action.payload.value,
+            valueY: state.field.coord.valueY,
+          },
+        },
+      };
     case "setFieldSizeY":
       return {
         ...state,
         field: {
           ...state.field,
-          coord: { valueY: action.payload.value, ...state.field.coord },
+          coord: {
+            valueX: state.field.coord.valueX,
+            valueY: action.payload.value,
+          },
         },
       };
     case "setFieldSize":
