@@ -7,7 +7,6 @@ import { Context } from "../state/Context";
 
 const ChangeClassMenu = () => {
   const [state, dispatch] = useContext(Context);
-  // const [fieldSize, setFieldSize] = useState(false);
   const setChoosedClass = ({ choosedClass }) => {
     dispatch({
       type: "setChoosedClass",
@@ -18,10 +17,10 @@ const ChangeClassMenu = () => {
   return (
     <Container>
       <Row>
-        <Col className="text-primary " xs={2}>
+        <Col className="text-primary ">
           <p>Choosed Class: {state.choosedClass}</p>
         </Col>
-        <Col xs={10}>
+        <Col>
           <Button
             className="w-10 flex-fill btn-sm"
             variant="outline-primary"
