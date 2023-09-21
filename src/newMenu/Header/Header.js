@@ -27,6 +27,8 @@ const Header = () => {
             variant="outline-primary"
             onClick={() => setHideHeader(!hideHeader)}
           >
+            {" "}
+            Hide
             <BsArrowDownUp />
           </Button>
         </Col>
@@ -35,11 +37,15 @@ const Header = () => {
   ) : (
     <Container className="Header">
       <Row>
-        <Col>
+        <Col className="HideHeaderArrowCol">
           <Button
+            className="HideHeaderArrowCol"
             variant="outline-primary"
+            size="lg"
             onClick={() => setHideHeader(!hideHeader)}
           >
+            <BsArrowDownUp />
+            <h4>Choose obedience class & change field size</h4>
             <BsArrowDownUp />
           </Button>
         </Col>
