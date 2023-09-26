@@ -49,7 +49,7 @@ const Header = () => {
             onClick={() => setHideHeader(!hideHeader)}
           >
             <BsArrowDownUp />
-            <h4>Choose obedience class & change field size</h4>
+            <h6>Choose obedience class & change field size</h6>
             <BsArrowDownUp />
           </Button>
         </Col>
