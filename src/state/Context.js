@@ -4,7 +4,7 @@ const initialState = {
   field: { coord: { valueX: 50, valueY: 50 }, limit: { min: 10, max: 100 } },
   Uve: { on: false, coord: { valueX: 10, valueY: 10 }, rotation: 0 },
   class: { chosenClass: 0 },
-  BoxWithExercises: { valueX: 20, valueY: 50 },
+  BoxWithExercises: { valueX: 25, valueY: 50 },
 };
 
 function reducer(state, action) {
