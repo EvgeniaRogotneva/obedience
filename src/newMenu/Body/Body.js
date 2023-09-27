@@ -2,6 +2,8 @@ import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Field from "../../field/Field";
+import BodySVGWrapper from "../BodySVGWrapper/BodySVGWrapper";
+import BoxWithExercises from "../BoxWithExercises/BoxWithExercises";
 
 const Body = () => {
   return (
@@ -11,7 +13,10 @@ const Body = () => {
           <ExerciseIcons />
         </Col> */}
         <Col>
-          <Field />
+          <BodySVGWrapper>
+            <BoxWithExercises />
+            <Field />
+          </BodySVGWrapper>
         </Col>
       </Row>
     </Container>
