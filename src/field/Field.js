@@ -16,7 +16,7 @@ const Field = () => {
       <FieldPattern />
       <rect
         fill="url(#meter)"
-        x="200"
+        x={state.BoxWithExercises.valueX * 10}
         y="0"
         width={fieldWidth}
         height={fieldHeight}
